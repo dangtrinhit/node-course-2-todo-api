@@ -11,7 +11,6 @@ beforeEach((done) => {
 describe ('POST /todos', () => {
   it('should create a new todo', (done) => {
     var text = 'Test todo text'
-
     request(app)
       .post('/todos')
       .send({text})
@@ -35,7 +34,7 @@ describe ('POST /todos', () => {
   it('should not create todo with invalid body data', (done) => {
     request(app)
       .post('/todos')
-      .send({text="1"})
+      .send({})
       .expect(400)
       .end((err,res) => {
         if (err) {
