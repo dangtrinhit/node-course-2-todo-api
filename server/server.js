@@ -25,12 +25,4 @@ app.listen(3000, () => {
   console.log('Started on port 3000')
 })
 
-// var user = new User({
-//   email:'dangtrinhit@gmail.com   '
-// })
-//
-// user.save().then((doc)=> {
-//   console.log('User saved', doc)
-// }, (e)=> {
-//   console.log ('Unable to save user')
-// })
+module.exports = {app}
